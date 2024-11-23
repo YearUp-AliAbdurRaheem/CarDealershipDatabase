@@ -14,10 +14,10 @@ CREATE DATABASE Dealerships;
 USE Dealerships;
 
 CREATE TABLE dealerships (
-    dealership_id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(50),
-    address VARCHAR(50), 
-    phone VARCHAR(12)
+    dealership_id INT AUTO_INCREMENT PRIMARY KEY
+    , name VARCHAR(50)
+    , address VARCHAR(50)
+    , phone VARCHAR(12)
 );
 
 # ------------------------------------------------------------ #
@@ -49,47 +49,47 @@ CREATE TABLE inventory (
 # ------------------------------------------------------------ #
 CREATE TABLE SalesContracts (
     contract_id INT AUTO_INCREMENT PRIMARY KEY,
-    date DATE,
-    customer_name VARCHAR(100),
-    customer_email VARCHAR(100),
-    vin DECIMAL(6,0),
-    vehicle_year INT,
-    make VARCHAR(50),
-    model VARCHAR(50),
-    vehicle_type VARCHAR(50),
-    color VARCHAR(50),
-    odometer BIGINT,
-    vehicle_price DECIMAL(12,2),
-    sales_tax DECIMAL(12,2),
-    recording_fee DECIMAL(12,2),
-    processing_fee DECIMAL(12,2),
-    total_price DECIMAL(12,2),
-    is_financed BOOLEAN,
-    monthly_payment DECIMAL(12,2),
-    FOREIGN KEY (vin) REFERENCES vehicles(vin) -- Ensures the vehicle exists in inventory before it can be sold
+    date DATE
+    , customer_name VARCHAR(100)
+    , customer_email VARCHAR(100)
+    , vin DECIMAL(6,0)
+    , vehicle_year INT
+    , make VARCHAR(50)
+    , model VARCHAR(50)
+    , vehicle_type VARCHAR(50)
+    , color VARCHAR(50)
+    , odometer BIGINT
+    , vehicle_price DECIMAL(12,2)
+    , sales_tax DECIMAL(12,2)
+    , recording_fee DECIMAL(12,2)
+    , processing_fee DECIMAL(12,2)
+    , total_price DECIMAL(12,2)
+    , is_financed BOOLEAN
+    , monthly_payment DECIMAL(12,2)
+    , FOREIGN KEY (vin) REFERENCES vehicles(vin) -- Ensures the vehicle exists in inventory before it can be sold
 );
 
 # ------------------------------------------------------------ #
 #                   Adding LeaseContracts table                #
 # ------------------------------------------------------------ #
 CREATE TABLE LeaseContracts (
-    contract_id INT AUTO_INCREMENT PRIMARY KEY,
-    date DATE,
-    customer_name VARCHAR(100),
-    customer_email VARCHAR(100),
-    vin DECIMAL(6,0),
-    vehicle_year INT,
-    make VARCHAR(50),
-    model VARCHAR(50),
-    vehicle_type VARCHAR(50),
-    color VARCHAR(50),
-    odometer BIGINT,
-    vehicle_price DECIMAL(12,2),
-    expected_ending_value DECIMAL(12,2),
-    lease_fee DECIMAL(12,2),
-    total_price DECIMAL(12,2),
-    monthly_payment DECIMAL(12,2),
-    FOREIGN KEY (vin) REFERENCES vehicles(vin)
+    contract_id INT AUTO_INCREMENT PRIMARY KEY
+    , date DATE
+    , customer_name VARCHAR(100)
+    , customer_email VARCHAR(100)
+    , vin DECIMAL(6,0)
+    , vehicle_year INT
+    , make VARCHAR(50)
+    , model VARCHAR(50)
+    , vehicle_type VARCHAR(50)
+    , color VARCHAR(50)
+    , odometer BIGINT
+    , vehicle_price DECIMAL(12,2)
+    , expected_ending_value DECIMAL(12,2)
+    , lease_fee DECIMAL(12,2)
+    , total_price DECIMAL(12,2)
+    , monthly_payment DECIMAL(12,2)
+    , FOREIGN KEY (vin) REFERENCES vehicles(vin)
 );
 
 # ------------------------------------------------------------ # 
@@ -193,23 +193,23 @@ VALUES
 # ------------------------------------------------------------ #
 INSERT INTO 
     SalesContracts (
-        date,
-        customer_name,
-        customer_email,
-        vin,
-        vehicle_year,
-        make,
-        model,
-        vehicle_type,
-        color,
-        odometer,
-        vehicle_price,
-        sales_tax,
-        recording_fee,
-        processing_fee,
-        total_price,
-        is_financed,
-        monthly_payment
+        date
+        , customer_name
+        , customer_email
+        , vin
+        , vehicle_year
+        , make
+        , model
+        , vehicle_type
+        , color
+        , odometer
+        , vehicle_price
+        , sales_tax
+        , recording_fee
+        , processing_fee
+        , total_price
+        , is_financed
+        , monthly_payment
     )
 VALUES
     (
@@ -237,21 +237,21 @@ VALUES
 # ------------------------------------------------------------ #
 INSERT INTO 
     LeaseContracts (
-        date,
-        customer_name,
-        customer_email,
-        vin,
-        vehicle_year,
-        make,
-        model,
-        vehicle_type,
-        color,
-        odometer,
-        vehicle_price,
-        expected_ending_value,
-        lease_fee,
-        total_price,
-        monthly_payment
+        date
+        , customer_name
+        , customer_email
+        , vin
+        , vehicle_year
+        , make
+        , model
+        , vehicle_type
+        , color
+        , odometer
+        , vehicle_price
+        , expected_ending_value
+        , lease_fee
+        , total_price
+        , monthly_payment
     )
 VALUES
     (
