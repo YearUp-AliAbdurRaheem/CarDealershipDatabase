@@ -1,7 +1,9 @@
 # Dealership Database Management System
 
 ## Overview
-This project is a comprehensive database management system designed for car dealerships. It allows for the management of dealerships, vehicles, inventory, sales contracts, and lease contracts. The system is built using SQL and includes [tests](Tests).
+This project is a comprehensive database management system designed for car dealerships. It allows for the management of dealerships, vehicles, inventory, sales contracts, and lease contracts. 
+
+The system is built using SQL and includes [tests](Tests).
 
 ## Features
 - **Database Creation**: Automatically creates a new database for managing dealership data.
@@ -18,10 +20,12 @@ The database consists of the following tables:
 - **LeaseContracts**: Manages lease agreements for vehicles, including terms and customer details.
 
 ## Interesting Feature
-One notable aspect of this database is the use of foreign keys, such as `FOREIGN KEY (vin) REFERENCES vehicles(vin)`. This ensures that any vehicle sold through a sales contract must exist in the vehicles table, maintaining data integrity and preventing errors in sales records.
+One notable aspect of this database is the use of foreign keys, such as `FOREIGN KEY (vin) REFERENCES vehicles(vin)`. 
+
+This ensures that any vehicle sold through a sales contract must exist in the vehicles table, maintaining data integrity and preventing errors in sales records.
 
 ## Getting Started
-To set up the database, run the `Main.sql` script in your MySQL Workbench. This will create the database and all necessary tables, along with sample data for testing.
+To set up the database, run the [`Main.sql`](Main.sql) script in your MySQL Workbench. This will create the database and all necessary tables, along with sample data for testing.
 
 <span style="color: red;">**WARNING: THIS WILL OVERWITE ANY DATABASE NAMED "Dealerships"!**</span>
 
