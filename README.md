@@ -2,7 +2,9 @@
   <img src="icon.png" alt="Logo" width="300"/>
 </p>
 
+<p align ="center"><img src="https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white"></img></p>
 <h1 align="center">Dealership Database Management System</h1>
+
 
 
 ## Overview
