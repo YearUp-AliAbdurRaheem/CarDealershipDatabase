@@ -1,4 +1,9 @@
-# Dealership Database Management System
+<p align="center">
+  <img src="icon.png" alt="Logo" width="300"/>
+</p>
+
+<h1 align="center">Dealership Database Management System</h1>
+
 
 ## Overview
 This project is a comprehensive database management system designed for car dealerships. It allows for the management of dealerships, vehicles, inventory, sales contracts, and lease contracts. 
